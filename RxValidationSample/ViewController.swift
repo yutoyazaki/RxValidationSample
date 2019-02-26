@@ -11,16 +11,23 @@ import RxSwift
 import RxCocoa
 
 class ViewController: UIViewController {
+
+  @IBOutlet private weak var textField: UITextField!
+  @IBOutlet private weak var resultLabel: UILabel!
   private let disposeBag = DisposeBag()
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    let textView = UITextView()
-    textView.rx.text
+    bind()
+  }
+
+  private func bind() {
+    textField.rx.text
       .validate(NameValidator.self)
-      .bind { result in
-        dump(result)
+      .map { result -> String? in
+        result.errorDescription
       }
+      .bind(to: resultLabel.rx.text)
       .disposed(by: disposeBag)
   }
 }

@@ -14,14 +14,15 @@ protocol Validator {
   static func validate(_ value: ValueType) -> ValidationResult<ErrorType>
 }
 
-enum ValidationResult<E: Error> {
-  case valid
-  case invalid(E)
+enum NameValidator: Validator {
+  typealias ValueType = String?
+  typealias ErrorType = NameValidationError
 
-  var isValid: Bool {
-    if case .valid = self {
-      return true
+  static func validate(_ value: String?) -> ValidationResult<NameValidationError> {
+    guard let value = value, !value.isEmpty else { return .invalid(.empty) }
+    if value.count > 30 {
+      return .invalid(.tooLong)
     }
-    return false
+    return .valid
   }
 }

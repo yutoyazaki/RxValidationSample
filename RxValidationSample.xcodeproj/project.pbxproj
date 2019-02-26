@@ -17,7 +17,7 @@
 		D1E7D9F822257B27001C383C /* RxValidationSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7D9F722257B27001C383C /* RxValidationSampleTests.swift */; };
 		D1E7DA0322257CC0001C383C /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7DA0222257CC0001C383C /* Validator.swift */; };
 		D1E7DA0522257D9B001C383C /* ObservableType+Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7DA0422257D9B001C383C /* ObservableType+Validator.swift */; };
-		D1E7DA082225814C001C383C /* ValidateRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7DA072225814C001C383C /* ValidateRule.swift */; };
+		D1E7DA082225814C001C383C /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7DA072225814C001C383C /* ValidationResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,7 @@
 		D1E7D9F922257B27001C383C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1E7DA0222257CC0001C383C /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		D1E7DA0422257D9B001C383C /* ObservableType+Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Validator.swift"; sourceTree = "<group>"; };
-		D1E7DA072225814C001C383C /* ValidateRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateRule.swift; sourceTree = "<group>"; };
+		D1E7DA072225814C001C383C /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
 		D8144081C8F97D804D6E3B63 /* Pods-RxValidationSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxValidationSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxValidationSample/Pods-RxValidationSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,7 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				D1E7DA0422257D9B001C383C /* ObservableType+Validator.swift */,
-				D1E7DA072225814C001C383C /* ValidateRule.swift */,
+				D1E7DA072225814C001C383C /* ValidationResult.swift */,
 				D1E7DA0222257CC0001C383C /* Validator.swift */,
 			);
 			path = Validator;
@@ -324,7 +324,7 @@
 			files = (
 				D1E7DA0522257D9B001C383C /* ObservableType+Validator.swift in Sources */,
 				D1E7D9E522257B25001C383C /* ViewController.swift in Sources */,
-				D1E7DA082225814C001C383C /* ValidateRule.swift in Sources */,
+				D1E7DA082225814C001C383C /* ValidationResult.swift in Sources */,
 				D1E7DA0322257CC0001C383C /* Validator.swift in Sources */,
 				D1E7D9E322257B25001C383C /* AppDelegate.swift in Sources */,
 			);
