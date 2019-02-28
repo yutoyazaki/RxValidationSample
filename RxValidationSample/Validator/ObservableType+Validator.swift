@@ -10,7 +10,8 @@ import Foundation
 import RxSwift
 
 extension ObservableType {
-  func validate<V: Validator>(_ validator: V.Type) -> Observable<ValidationResult<V.ErrorType>> where V.ValueType == Self.E {
-    return map { validator.validate($0) }
+  func validate<V: Validator>(_ validator: V.Type)
+    -> Observable<ValidationResult<V.ErrorType>> where V.ValueType == Self.E {
+      return map { validator.validate($0) }
   }
 }

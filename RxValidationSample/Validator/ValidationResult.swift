@@ -26,17 +26,3 @@ enum ValidationResult<E: Error> {
     return nil
   }
 }
-
-enum NameValidationError: LocalizedError {
-  case empty
-  case tooLong
-
-  var errorDescription: String? {
-    switch self {
-    case .empty:
-      return "名前は必須項目です。"
-    case .tooLong:
-      return "名前は30文字以内で入力してください。"
-    }
-  }
-}

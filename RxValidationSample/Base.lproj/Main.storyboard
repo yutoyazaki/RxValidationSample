@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TIt-3n-OB7">
-                                <rect key="frame" x="37.5" y="318.5" width="300" height="30"/>
+                                <rect key="frame" x="37.5" y="243.5" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="06T-6q-Tb4"/>
                                 </constraints>
@@ -28,23 +28,39 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYF-Tp-Typ">
-                                <rect key="frame" x="166.5" y="356.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="165.5" y="281.5" width="44.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2xl-pz-KRI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Paj-oR-c3c">
+                                <rect key="frame" x="157.5" y="318.5" width="60" height="30"/>
+                                <color key="backgroundColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="x7Y-As-nOd"/>
+                                </constraints>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="TIt-3n-OB7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6XE-Gf-QS6"/>
+                            <constraint firstItem="FYF-Tp-Typ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2We-VQ-0fd"/>
+                            <constraint firstItem="Paj-oR-c3c" firstAttribute="top" secondItem="FYF-Tp-Typ" secondAttribute="bottom" constant="16" id="5XY-vy-H4p"/>
                             <constraint firstItem="FYF-Tp-Typ" firstAttribute="top" secondItem="TIt-3n-OB7" secondAttribute="bottom" constant="8" id="AoX-ZX-MPg"/>
+                            <constraint firstItem="Paj-oR-c3c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="O76-7c-yJ6"/>
+                            <constraint firstItem="Paj-oR-c3c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bRc-ca-RQ6"/>
                             <constraint firstItem="TIt-3n-OB7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lTN-7J-a10"/>
-                            <constraint firstItem="FYF-Tp-Typ" firstAttribute="centerX" secondItem="TIt-3n-OB7" secondAttribute="centerX" id="vKE-MM-9YH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="resultLabel" destination="FYF-Tp-Typ" id="Cng-iT-pe1"/>
+                        <outlet property="submitButton" destination="Paj-oR-c3c" id="sRu-LG-YeX"/>
                         <outlet property="textField" destination="TIt-3n-OB7" id="2ih-H5-EZl"/>
                     </connections>
                 </viewController>

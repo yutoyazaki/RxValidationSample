@@ -14,6 +14,7 @@ class ViewController: UIViewController {
 
   @IBOutlet private weak var textField: UITextField!
   @IBOutlet private weak var resultLabel: UILabel!
+  @IBOutlet private weak var submitButton: UIButton!
   private let disposeBag = DisposeBag()
 
   override func viewDidLoad() {
@@ -28,6 +29,12 @@ class ViewController: UIViewController {
         result.errorDescription
       }
       .bind(to: resultLabel.rx.text)
+      .disposed(by: disposeBag)
+
+    textField.rx.text
+      .validate(NameValidator.self)
+      .map { $0.isValid }
+      .bind(to: submitButton.rx.isEnabled)
       .disposed(by: disposeBag)
   }
 }
