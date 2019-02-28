@@ -253,7 +253,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RxValidationSample/Pods-RxValidationSample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-RxValidationSample/Pods-RxValidationSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -268,7 +268,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxValidationSample/Pods-RxValidationSample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxValidationSample/Pods-RxValidationSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9E9F64C2F0608432B189BE7B /* [CP] Check Pods Manifest.lock */ = {
